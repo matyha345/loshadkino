@@ -1,0 +1,57 @@
+@import 'src/styles/variables.scss';
+
+.desc {
+	display: flex;
+
+	.descHolder {
+		.descTitle {
+			font-size: 20px;
+			padding-bottom: 10px;
+		}
+		.descText {
+			max-width: 300px;
+			font-size: 14px;
+			line-height: 1.2;
+			letter-spacing: 1.1px;
+			margin-top: 6px;
+
+			&:nth-child(2) {
+				text-decoration: underline;
+			}
+			&:nth-child(3) {
+				color: $color-persian-red;
+
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+			&:nth-child(4) {
+				font-weight: 500;
+			}
+		}
+
+		&:nth-child(2) {
+			margin-top: 40px;
+			max-width: 500px;
+			margin-left: 50px;
+
+			.descText {
+				max-width: 100%;
+				margin-top: 0;
+				text-decoration: none;
+
+				.descTextTel {
+					width: 100%;
+					display: flex;
+					justify-content: end;
+					margin-top: 20px;
+					color: $color-persian-red;
+
+					&:hover {
+						opacity: 0.8;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,66 @@
+@import 'src/styles/variables.scss';
+
+.wrapper {
+	margin-top: 20px;  //сомнительно но окей
+	padding: 96px 0;
+	position: relative;
+	.title {
+		text-align: center;
+		font-size: 62px;
+		line-height: 1.3;
+		font-family: $caveat-font;
+	}
+
+	.text {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		max-width: 580px;
+		margin-top: 20px;
+		font-size: 18px;
+		line-height: 1.3;
+		letter-spacing: 1.1px;
+		white-space: pre-wrap;
+		position: relative;
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: -200px;
+			left: -500px;
+			background-image: url('/horseOne.jpg');
+			width: 616px;
+			height: 422px;
+			z-index: $z-index-5;
+		}
+	}
+
+	.cards {
+		margin-top: 96px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.card {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			h3 {
+				font-size: 20px;
+				font-family: $caveat-font;
+			}
+
+			p {
+				text-align: center;
+				max-width: 300px;
+				margin-top: 15px;
+				font-size: 14px;
+				line-height: 1.2;
+				letter-spacing: 1.1px;
+			}
+		}
+	}
+}

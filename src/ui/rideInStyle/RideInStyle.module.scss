@@ -1,0 +1,31 @@
+@import 'src/styles/variables.scss';
+
+.wrapper{
+    background-color: $color-persian-red;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: $color-white;
+
+    padding: 15px 0;
+
+    .title{
+        font-size: 20px;
+        font-family: 700;
+        letter-spacing: 1.1px;
+    }
+
+    .text{
+        margin-left: 5px;
+        font-family: $caveat-font;
+        font-size: 20px;
+        font-family: 500;
+        letter-spacing: 1.1;
+    }
+
+    .btn{
+        margin-left: 15px;
+    }
+}

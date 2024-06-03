@@ -1,0 +1,41 @@
+@import 'src/styles/variables.scss';
+
+.notFound {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+
+	padding: 25px;
+	margin: 0 auto;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-image: fill 0 linear-gradient(#0001, #000);
+
+	max-width: 100%;
+	.wrapperInner {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		.title {
+			margin-bottom: 50px;
+			text-transform: uppercase;
+			backdrop-filter: blur(10px);
+			font-size: 50px;
+            font-family: $caveat-font;
+			color: $color-white;
+			padding: 5px;
+			border-radius: 10px;
+		}
+	}
+}

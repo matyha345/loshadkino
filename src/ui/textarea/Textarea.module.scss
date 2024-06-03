@@ -1,0 +1,33 @@
+@import 'src/styles/variables.scss';
+
+.wrapper {
+	width: 100%;
+	padding: 5px;
+	.input {
+		border: 1px solid $bg-thunder-transparent;
+		font-size: 16px;
+		padding: 14px 35px 14px 14px;
+		border-radius: 10px;
+		margin-bottom: 0.7rem;
+		outline: none;
+		width: 100%;
+		position: relative;
+		transition: all 0.3s ease-in-out;
+		font-weight: 200;
+
+		&:focus {
+			border-color: $color-persian-red;
+		}
+
+		&::placeholder {
+			color: $color-black;
+		}
+	}
+
+	.error {
+		color: $color-persian-red;
+		font-size: 0.8rem;
+		// margin-top: 0.1rem;
+		margin-left: 10px;
+	}
+}

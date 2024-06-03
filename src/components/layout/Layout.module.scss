@@ -1,0 +1,23 @@
+.wrapper {
+	max-width: 1440px;
+	min-width: 320px;
+	padding: 0 20px;
+	margin: 0 auto;
+
+	display: flex;
+    flex-direction: column;
+    height: 100dvh;
+
+
+	@media (min-width: 1280px) {
+		padding: 0 96px;
+	}
+}
+
+.noWrapper {
+	padding: 0 20px;
+	max-width: 100%;
+	@media (min-width: 1280px) {
+		padding: 0 0;
+	}
+}

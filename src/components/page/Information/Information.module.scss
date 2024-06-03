@@ -1,0 +1,41 @@
+@import 'src/styles/variables.scss';
+
+.wrapper{
+    display: flex;
+
+    .control{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 12px;
+        gap: 5px;
+    }
+
+    .desc{
+        margin-top: 60px;
+        margin-left: 25px;
+        max-width: 922px;
+        margin-bottom: 60px;
+    }
+    
+    .content{
+        padding: 10px 30px;
+        border-radius: 5px;
+        background-color: $bg-white;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+        position: relative;
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 100px;
+				left: -500px;
+				background-image: url('/horseOne.jpg');
+				width: 616px;
+				height: 422px;
+				z-index: $z-index-5;
+			}
+    }
+}
