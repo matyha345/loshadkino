@@ -10,7 +10,7 @@ export const dataComponent = {
 		},
 		{
 			name: 'Галерея',
-			hrefLink: '/contact'
+			hrefLink: '/gallery'
 		},
 		{
 			name: 'адрес',

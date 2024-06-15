@@ -14,7 +14,31 @@ const Application = () => {
 		formState: { errors }
 	} = useForm()
 
-	const onSubmit = data => alert(`executed_${JSON.stringify(data, null, 2)}`)
+	// const onSubmit = data => alert(`executed_${JSON.stringify(data, null, 2)}`)
+
+	const onSubmit = async data => {
+		try {
+			const response = await fetch('http://localhost:8000/submit', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(data)
+			})
+
+			if (!response.ok) {
+				throw new Error(`HTTP error! status: ${response.status}`)
+			}
+
+			const result = await response.json()
+			console.log(result) // Логирование результата
+			alert(result.message)
+		} catch (error) {
+			console.error('Error:', error)
+			console.log(`executed_${JSON.stringify(data, null, 2)}`)
+			alert('Error')
+		}
+	}
 
 	return (
 		<Layout background={'#292728'}>

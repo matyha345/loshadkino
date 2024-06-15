@@ -5,8 +5,8 @@ const ContactMethods = ({ register, errors }) => {
 	return (
 		<div className={styles.subject}>
 			<Field
-				error={errors?.tel?.message}
-				name='tel'
+				error={errors?.phone?.message}
+				name='phone'
 				register={register}
 				options={{
 					required: 'Требуется указать телефон'
