@@ -4,6 +4,10 @@ import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
 import RoutesPage from './routes/RoutesPage'
 import './styles/index.scss'
 
+if (typeof global === 'undefined') {
+	window.global = window
+}
+
 const queryClient = new QueryClient({
 	defaultOptions: {
 		queries: {
@@ -19,3 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 		</React.StrictMode>
 	</QueryClientProvider>
 )
+
+// TODO: изменить отправку Email --- (providers) !!!!!
+// TODO: маска для поля Cleave.js
+// TODO: Gallery

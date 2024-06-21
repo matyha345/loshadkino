@@ -1,0 +1,15 @@
+@import 'src/styles/variables.scss';
+
+.wrapper {
+	.photosContainer {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		margin-top: 20px;
+		.image {
+			width: 350px;
+			border: 1px solid #ccc;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+		}
+	}
+}
