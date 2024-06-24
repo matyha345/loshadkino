@@ -25,7 +25,7 @@ const Gallery = () => {
 		<Layout background={'#292728'}>
 			<div className={styles.wrapper}>
 				<div className={styles.backBtn}>
-					<Button   clickHandler={goBack}>Вернутся обратно</Button>
+					<Button clickHandler={goBack}>Вернутся обратно</Button>
 				</div>
 
 				{isLoading ? (
