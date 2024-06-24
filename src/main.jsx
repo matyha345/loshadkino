@@ -25,5 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )
 
 // TODO: изменить отправку Email --- (providers) !!!!!
+
 // TODO: маска для поля Cleave.js
+
 // TODO: Gallery

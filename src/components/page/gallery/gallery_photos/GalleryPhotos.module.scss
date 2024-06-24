@@ -1,15 +1,31 @@
 @import 'src/styles/variables.scss';
 
-.wrapper {
-	.photosContainer {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 10px;
-		margin-top: 20px;
-		.image {
-			width: 350px;
-			border: 1px solid #ccc;
-			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+.photosContainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+
+	.wrapperImg {
+		position: relative;
+		flex: 1 0 22rem;
+		margin: 1rem;
+		color: #fff;
+		cursor: pointer;
+
+		transition: all .3s ease-in-out;
+
+		&:hover{
+			transform: scale(1.02);
+		}
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 400ms ease-out;
+			border-radius: 10px;
 		}
 	}
 }

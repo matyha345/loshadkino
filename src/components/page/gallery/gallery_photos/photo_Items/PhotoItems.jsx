@@ -5,7 +5,7 @@ const PhotoItems = ({ photos, setCurrentImg }) => {
 		<>
 			{photos.map((photo, index) => (
 				<div
-					className={styles.image}
+					className={styles.wrapperImg}
 					key={`__linkss_   ${index}`}
 					onClick={() => setCurrentImg(index)}
 				>
