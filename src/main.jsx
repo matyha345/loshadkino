@@ -24,8 +24,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 	</QueryClientProvider>
 )
 
-// TODO: изменить отправку Email --- (providers) !!!!!
 
-// TODO: маска для поля Cleave.js
+//TODO: Gallery баг с массивом при развертывания картинки
 
-// TODO: Gallery
+// TODO: маска для поля Cleave.js (форма)
+
+// TODO: Reset для формы кнопка отмены
+

@@ -22,7 +22,7 @@ const Header = ({ isNotWrapper, background }) => {
 				className={styles.wrapper}
 			>
 				<Link to={'/'} className={styles.logo}>
-					<img src='/logo.svg' alt='Логотип сайта' />
+					<img src='svg/logo.svg' alt='Логотип сайта' />
 				</Link>
 
 				<ul className={styles.item}>

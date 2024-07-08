@@ -3,24 +3,24 @@ import styles from './OurStaff.module.scss'
 
 const dataSara = [
 	{
-		name: 'Анна Петрова',
+		name: 'Моторина Мария',
 		type: 'Тренер',
-		img: '/maha.png'
+		img: 'images/Maria_Motorina.png'
 	},
 	{
-		name: 'Екатерина Михайлова',
+		name: 'Хорава Наталья',
 		type: 'Тренер',
-		img: '/maha.png'
+		img: 'images/Natalia_Chora.png'
 	},
 	{
-		name: 'Мария Кузнецова',
-		type: 'Волонтер',
-		img: '/maha.png'
+		name: 'Шишенина Дарья',
+		type: 'Тренер',
+		img: 'images/Shishenina_Daria.png'
 	},
 	{
-		name: 'Ольга Соколова',
-		type: 'Тренер',
-		img: '/maha.png'
+		name: 'Николаева Виктория',
+		type: 'Фотограф',
+		img: 'images/Nikolaeva_Victoria.png'
 	}
 ]
 

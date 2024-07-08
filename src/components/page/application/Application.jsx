@@ -1,43 +1,35 @@
 import { useForm } from 'react-hook-form'
+import { useMutation } from 'react-query'
+import { LocalSendMessageEmail } from '../../../providers/local.sendMessage.srvice'
+
 import Links from '../../../ui/links/Links'
 import Layout from '../../layout/Layout'
 import Caption from './caption/Caption'
 import ContactMethods from './contact-methods/ContactMethods'
 import CommunicationDetails from './communication-details/CommunicationDetails'
+
 import styles from './Application.module.scss'
 
 const Application = () => {
+	
 	const {
 		register,
 		handleSubmit,
-		watch,
 		formState: { errors }
 	} = useForm()
 
-	// const onSubmit = data => alert(`executed_${JSON.stringify(data, null, 2)}`)
-
-	const onSubmit = async data => {
-		try {
-			const response = await fetch('http://localhost:8000/submit', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify(data)
-			})
-
-			if (!response.ok) {
-				throw new Error(`HTTP error! status: ${response.status}`)
-			}
-
-			const result = await response.json()
-			console.log(result) // Логирование результата
-			alert(result.message)
-		} catch (error) {
+	const mutation = useMutation(LocalSendMessageEmail.submitData, {
+		onSuccess: data => {
+			alert(data.message)
+		},
+		onError: error => {
 			console.error('Error:', error)
-			console.log(`executed_${JSON.stringify(data, null, 2)}`)
 			alert('Error')
 		}
+	})
+
+	const onSubmit = async data => {
+		mutation.mutate(data)
 	}
 
 	return (
