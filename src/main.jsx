@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
+import { QueryClient, QueryClientProvider } from 'react-query'
 import RoutesPage from './routes/RoutesPage'
 import './styles/index.scss'
 
@@ -25,9 +25,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )
 
 
-//TODO: Gallery баг с массивом при развертывания картинки
+// TODO: Alert: написать Алерт 
 
-// TODO: маска для поля Cleave.js (форма)
+// TODO: Адаптив => phone
 
-// TODO: Reset для формы кнопка отмены
+// TODO: Исправить not-found 
+
+
+
 

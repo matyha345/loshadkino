@@ -1,7 +1,7 @@
 import Field from '../../../../ui/feild/Field'
 import styles from '../Application.module.scss'
 
-const Caption = ({ register, errors }) => {
+const Caption = ({ register, errors}) => {
 	return (
 		<div className={styles.caption}>
 			<Field

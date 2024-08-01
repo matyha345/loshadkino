@@ -21,6 +21,13 @@ const Gallery = () => {
 		nav(-1)
 	}
 
+	const getErrorMessage = error => {
+		if (error.message === 'Network Error') {
+			return 'Не удалось загрузить данные. Проверьте подключение к сети..'
+		}
+		return `Error: ${error.message}`
+	}
+
 	return (
 		<Layout background={'#292728'}>
 			<div className={styles.wrapper}>
@@ -28,17 +35,23 @@ const Gallery = () => {
 					<Button clickHandler={goBack}>Вернутся обратно</Button>
 				</div>
 
-				{isLoading ? (
-					<div>Loading...</div>
-				) : error ? (
-					<div>Error: {error.message}</div>
-				) : responseData ? (
-					<div className={styles.wrapper}>
-						<GalleryPhotos responseData={responseData} />
-					</div>
-				) : (
-					<div>No NewsComponent available...</div>
-				)}
+				<div className={styles.content}>
+					{isLoading ? (
+						<div className={styles.loader}></div>
+					) : error ? (
+						<div className={styles.errorWords}>
+							{getErrorMessage(error)}
+						</div>
+					) : responseData ? (
+						<div className={styles.wrapper}>
+							<GalleryPhotos responseData={responseData} />
+						</div>
+					) : (
+						<div className={styles.errorWords}>
+							Нет доступных изображений
+						</div>
+					)}
+				</div>
 			</div>
 		</Layout>
 	)
