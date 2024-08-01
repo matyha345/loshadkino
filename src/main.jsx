@@ -25,7 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )
 
 
-// TODO: Alert: написать Алерт 
+// TODO: yesContainer padding ???
 
 // TODO: Адаптив => phone
 

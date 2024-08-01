@@ -45,7 +45,7 @@ const Home = () => {
 			<Quotes />
 
 			<div className={style.wrapper}>
-				<OurStaff />
+				{/* <OurStaff /> */}
 			</div>
 			<RideInStyle />			
 
