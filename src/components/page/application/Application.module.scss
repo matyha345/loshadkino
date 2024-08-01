@@ -4,6 +4,7 @@
 .wrapper {
 	display: flex;
 	margin-bottom: 96px;
+	
 	.body {
 		display: flex;
 		flex-direction: column;
@@ -65,13 +66,15 @@
 				.btn {
 					display: flex;
 					justify-content: flex-end;
-					
+
 					&:last-child {
 						margin-left: 10px;
 					}
 					.button {
-						padding: 10px 20px;
 
+						cursor: pointer;
+
+						padding: 10px 20px;
 						border-radius: 10px;
 						background-color: $color-persian-red;
 						color: $color-white;

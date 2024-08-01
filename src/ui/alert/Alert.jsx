@@ -1,8 +1,9 @@
+import React, { useEffect, useRef, useState } from 'react'
+import clsx from 'clsx'
 import styles from './Alert.module.scss'
 
-import React, { useEffect, useRef, useState } from 'react'
-
-const Alert = ({ type = 'success', text }) => {
+const Alert = ({ type, text }) => {
+	
 	const [isVisible, setIsVisible] = useState(true)
 	const timeoutIdRef = useRef(null)
 
@@ -22,7 +23,21 @@ const Alert = ({ type = 'success', text }) => {
 		}
 	}, [isVisible])
 
-	return <div className={styles.alert}>{text}</div>
+	return (
+		<div
+			className={clsx(
+				styles.alert,
+				styles[type],
+				styles['animate-fade'],
+				{
+					[styles.visible]: isVisible,
+					[styles.hidden]: !isVisible
+				}
+			)}
+		>
+			{text}
+		</div>
+	)
 }
 
 export default Alert

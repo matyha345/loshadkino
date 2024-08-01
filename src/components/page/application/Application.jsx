@@ -10,6 +10,7 @@ import CommunicationDetails from './communication-details/CommunicationDetails'
 
 import styles from './Application.module.scss'
 import Alert from '../../../ui/alert/Alert'
+import { useState } from 'react'
 
 const Application = () => {
 	const {
@@ -18,23 +19,36 @@ const Application = () => {
 		reset,
 		setValue,
 		control,
-		onSuccess,
 		formState: { errors }
 	} = useForm()
 
+	const [alert, setAlert] = useState({
+		isVisible: false,
+		text: '',
+		type: 'success'
+	})
+
 	const mutation = useMutation(LocalSendMessageEmail.submitData, {
-		onSuccess: data => {
-			alert(data.message)
+		onSuccess: () => {
+			setAlert({
+				isVisible: true,
+				text: 'Данные успешно отправлены',
+				type: 'success'
+			})
+			resetFormFields()
 		},
 		onError: error => {
 			console.error('Error:', error)
-			alert('Error')
+			setAlert({
+				isVisible: true,
+				text: 'Ошибка при отправке данных',
+				type: 'error'
+			})
 		}
 	})
 
 	const onSubmit = async data => {
 		mutation.mutate(data)
-		resetFormFields()
 	}
 
 	const resetFormFields = () => {
@@ -86,6 +100,9 @@ const Application = () => {
 							</div>
 						</div>
 					</form>
+					{alert.isVisible && (
+						<Alert type={alert.type} text={alert.text} />
+					)}
 				</div>
 			</div>
 		</Layout>
