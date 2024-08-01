@@ -7,8 +7,6 @@ import AboutUs from './about/AboutUs'
 import OurStaff from './our-staff/OurStaff'
 import Quotes from './quotes/Quotes'
 
-// TODO:  Изменить названия классов  isNotWrapper в header
-// TODO:  Прописать alt!!
 
 const Home = () => {
 
@@ -21,7 +19,7 @@ const Home = () => {
 				<div className={style.home}>
 					<div
 						className={style.picture}
-						style={{ backgroundImage: "url('Home.JPG')" }}
+						style={{ backgroundImage: "url('home.jpg')" }}
 					></div>
 
 					<div className={style.content}>

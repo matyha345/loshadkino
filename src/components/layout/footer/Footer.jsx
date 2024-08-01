@@ -17,7 +17,7 @@ const Footer = ({ isNotWrapper }) => {
 			<div className={styles.wrapper}>
 				<div className={styles.left}>
 					<div className={styles.info}>
-						<img src='/logo-footer.svg' alt='' />
+						<img src='svg/logo-footer.svg' alt='' />
 						<p className={styles.text}>
 							Ферма, где вы будете чувствовать себя как дома. За
 							пределами ваших мечтаний. В пределах досягаемости.
@@ -101,7 +101,7 @@ const Footer = ({ isNotWrapper }) => {
 							target='_blank'
 						>
 							<p>Домашняя мини-ферма "Лошадкино"</p>
-							<img src='/Vk.svg' alt='' />
+							<img src='svg/Vk.svg' alt='Vk' />
 						</a>
 					</div>
 				</div>

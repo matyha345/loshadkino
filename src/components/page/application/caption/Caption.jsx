@@ -1,12 +1,12 @@
 import Field from '../../../../ui/feild/Field'
 import styles from '../Application.module.scss'
 
-const Caption = ({ register, errors }) => {
+const Caption = ({ register, errors}) => {
 	return (
 		<div className={styles.caption}>
 			<Field
-				error={errors?.name?.message}
-				name='name'
+				error={errors?.firstName?.message}
+				name='firstName'
 				register={register}
 				options={{
 					required: 'Требуется указать имя'

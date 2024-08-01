@@ -7,7 +7,7 @@ const Breadcrumbs = ({ children }) => {
 				{children.map(item => (
 					<div
 						key={`_dataSara_${item.name}`}
-						class={styles.staffMember}
+						className={styles.staffMember}
 					>
 						<img src={item.img} alt='Sarah Weber' />
 						<h3 className={styles.name}>{item.name}</h3>

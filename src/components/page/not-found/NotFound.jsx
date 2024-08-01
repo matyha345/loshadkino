@@ -8,7 +8,7 @@ const NotFound = () => {
 	return (
 		<section
 			className={styles.notFound}
-			style={{ backgroundImage: 'url("/Home.JPG")' }}
+			style={{ backgroundImage: 'url("/home.jpg")' }}
 		>
 			<div className={styles.wrapperInner}>
 				<h1 className={styles.title}>Страница не найдена</h1>

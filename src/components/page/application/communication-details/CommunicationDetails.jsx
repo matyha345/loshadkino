@@ -5,8 +5,8 @@ const CommunicationDetails = ({ register, errors }) => {
 	return (
 		<div className={styles.meta}>
 			<Textarea
-				error={errors?.AddInformation?.message}
-				name='addInformation'
+				error={errors?.info?.message}
+				name='info'
 				register={register}
 				type={'text'}
 				placeholder='Дополнительные сведения'

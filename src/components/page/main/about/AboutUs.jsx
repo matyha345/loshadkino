@@ -2,19 +2,19 @@ import styles from './AboutUs.module.scss'
 
 const aboutUsCard = [
 	{
-		images: '/aboutUs-one.png',
+		images: 'images/aboutUs-one.png',
 		title: 'Фотосессия',
 		text: 'Волшебная фотосессия на лошадях: познакомьтесь с нашими дружелюбными лошадьми и насладитесь красотой природы',
 		alt: 'Девушка с лошадью в лесу'
 	},
 	{
-		images: '/aboutUs-two.png',
+		images: 'images/aboutUs-two.png',
 		title: 'Уроки Верховой Езды',
 		text: 'Уроки верховой езды: усовершенствуйте свои навыки и достигайте новых высот!',
 		alt: 'Наездник на лошади преодолевает препятствие'
 	},
 	{
-		images: '/aboutUs-three.png',
+		images: 'images/aboutUs-three.png',
 		title: 'Верховая Езда на Свежем Воздухе',
 		text: 'Индивидуальные уроки на свежем воздухе: насладитесь природой и верховой ездой!',
 		alt: 'Девушка с лошадью на поле'

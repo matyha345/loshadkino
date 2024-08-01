@@ -8,8 +8,10 @@ import Button from '../../../ui/button/Button'
 import Links from '../../../ui/links/Links'
 import Layout from '../../layout/Layout'
 import styles from './Information.module.scss'
+import Price from './box/Price'
 
 const tabs = [
+	{ id: 'price', label: 'Прайс' },
 	{ id: 'safety', label: 'Техника безопасности' },
 	{ id: 'photography', label: 'Фотосъёмка' },
 	{ id: 'certificates', label: 'Сертификаты' },
@@ -21,10 +23,12 @@ const tabs = [
 ]
 
 const Information = () => {
-	const [activeTab, setActiveTab] = useState('safety')
+	const [activeTab, setActiveTab] = useState('price')
 
 	const renderActiveTab = () => {
 		switch (activeTab) {
+			case 'price':
+				return <Price />
 			case 'firstVisit':
 				return <FirstVisit />
 			case 'certificates':
